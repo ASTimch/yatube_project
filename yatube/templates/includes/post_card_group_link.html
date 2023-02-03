@@ -1,0 +1,8 @@
+{% extends "includes/post_card_base.html" %}
+{% block card_links %}
+{% if post.group %}
+  <a href="{% url 'posts:group_list' post.group.slug %}">
+    все записи группы
+  </a>
+{% endif %}
+{% endblock card_links %}
